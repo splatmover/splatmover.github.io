@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Splat-MOVER.">
+  <meta name="keywords" content="Splat-MOVER">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Splat-MOVER</title>
+
+  <script>
+
+    function updateInteractive_ASK_Splat() {
+      var task = document.getElementById("interative-menu-ask-splat").value;
+
+      var carousel = document.getElementById("results-carousel-ask-splat")
+
+      // update the relevant elements
+      // 
+      var videos = carousel.querySelectorAll(".ask_splat_rgb");
+      videos.forEach(video => {
+        video.src = "./static/videos/ask_splat/" + task + "/rgb.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".ask_splat_semantics_0");
+      videos.forEach(video => {
+        video.src = "./static/videos/ask_splat/" + task + "/semantics_0.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".ask_splat_semantics_1");
+      videos.forEach(video => {
+        video.src = "./static/videos/ask_splat/" + task + "/semantics_1.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".ask_splat_affordance");
+      videos.forEach(video => {
+        video.src = "./static/videos/ask_splat/" + task + "/affordance.mp4"
+      });
+    }
+
+  </script>
+
+  <script>
+
+    function updateInteractive_SEE_Splat() {
+      var task = document.getElementById("interative-menu-see-splat").value;
+
+      var carousel = document.getElementById("results-carousel-see-splat")
+
+      // update the relevant elements
+      // 
+      var videos = carousel.querySelectorAll(".see_splat_run_0");
+      videos.forEach(video => {
+        video.src = "./static/videos/see_splat/" + task + "/run_0.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".see_splat_run_1");
+      videos.forEach(video => {
+        video.src = "./static/videos/see_splat/" + task + "/run_1.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".see_splat_run_2");
+      videos.forEach(video => {
+        video.src = "./static/videos/see_splat/" + task + "/run_2.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".see_splat_run_3");
+      videos.forEach(video => {
+        video.src = "./static/videos/see_splat/" + task + "/run_3.mp4"
+      });
+    }
+
+  </script>
+
+  <script>
+
+    function updateInteractive_Grasp_Splat() {
+      var task = document.getElementById("interative-menu-grasp-splat").value;
+
+      var carousel = document.getElementById("results-carousel-grasp-splat")
+
+      // update the relevant elements
+      // 
+      var videos = carousel.querySelectorAll(".graspnet_object_1");
+      videos.forEach(video => {
+        video.src = "./static/videos/grasp_splat/" + task + "/object_1/graspnet.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".grasp_splat_object_1");
+      videos.forEach(video => {
+        video.src = "./static/videos/grasp_splat/" + task + "/object_1/grasp_splat.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".graspnet_object_2");
+      videos.forEach(video => {
+        video.src = "./static/videos/grasp_splat/" + task + "/object_2/graspnet.mp4"
+      });
+
+      // 
+      var videos = carousel.querySelectorAll(".grasp_splat_object_2");
+      videos.forEach(video => {
+        video.src = "./static/videos/grasp_splat/" + task + "/object_2/grasp_splat.mp4"
+      });
+
+    }
+
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://splatmover.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://msl.stanford.edu">
+            MSL
+          </a>
+          <a class="navbar-item" href="https://arm.stanford.edu/">
+            ARMLab
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Splat-MOVER: Multi-Stage, <br> 
+            Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="/">Ola Shorinwa</a><sup>&#42;</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=D1OiGH8AAAAJ&hl=en">Johnathan Tucker</a><sup>&#42;</sup>,</span>
+            <span class="author-block">
+              <a href="/">Aliyah Smith</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=feH32sgAAAAJ">Aiden Swann</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=u9ZQdTwAAAAJ">Timothy Chen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=ZfxUwNEAAAAJ">Roya Firoozi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=x2ZPRfoAAAAJ">Monroe Kennedy III</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=-EqbTXoAAAAJ">Mac Schwager</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div>
+          <div>
+            <sup>&#42;</sup>Equal Contribution.
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.04378"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.04378"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video<sup>&dagger;</sup></span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code<sup>&dagger;</sup></span>
+                </a>
+              </span>
+            </div>
+            <div>
+              <sup>&dagger;</sup>Coming Soon.
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/splat_mover/Splat_MOVER_banner.mp4"
+                type="video/mp4">
+      </video>
+      <!-- <h2 class="subtitle has-text-centered"> -->
+      <p class="has-text-justified"></p>
+        <span class="splat_mover">Splat-MOVER</span> utilizes the affordance-and-semantic-aware 
+        <i>ASK-Splat</i>
+        scene representation to localize and mask relevant objects in a language-guided, multi-stage 
+        manipulation task.
+        <i>SEE-Splat</i> creates a "digital twin" and edits the ASK-Splat scene in real-time, 
+        reflecting the current state of the real-world scene, 
+        enabling its use in multi-stage manipulation 
+        tasks. 
+        <i>Grasp-Splat</i> generates candidate grasp configurations for each object, at each stage 
+        of the manipulation task. 
+      <!-- </h2> -->
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present <span class="splat_mover">Splat-MOVER</span>, a modular robotics stack for 
+            open-vocabulary robotic manipulation,
+            which leverages the editability of Gaussian Splatting (GSplat) scene representations to 
+            enable multi-stage manipulation tasks.
+          </p>
+          <p>
+            <span class="splat_mover">Splat-MOVER</span> consists of: 
+            <ol type="i">
+              <li>
+                <i>ASK-Splat</i>, 
+                a GSplat representation 
+                that distills latent codes for language semantics and grasp affordance into 
+                the 3D scene. ASK-Splat enables geometric, semantic, and affordance understanding of 
+                3D scenes, which is critical for many robotics tasks; 
+              </li>
+              <li>
+                <i>SEE-Splat</i>,
+                a real-time scene-editing module using 3D semantic masking 
+                and infilling to visualize the motions of objects that result from robot interactions 
+                in the real-world. SEE-Splat creates a "digital twin" of the evolving environment 
+                throughout the manipulation task;
+              </li>
+              <li>
+                <i>Grasp-Splat</i>,
+                a grasp generation module that uses ASK-Splat and 
+                SEE-Splat to propose candidate grasps for open-world objects. ASK-Splat is trained 
+                in real-time from RGB images in a brief scanning phase prior to operation, while 
+                SEE-Splat and Grasp-Splat run in real-time during operation.
+              </li>
+            </ol>
+          </p>
+          <p>
+            We demonstrate the 
+            superior performance of <span class="splat_mover">Splat-MOVER</span> in hardware 
+            experiments on a Kinova robot 
+            compared to two recent baselines in four single-stage, open-vocabulary manipulation 
+            tasks, as well as in four multi-stage manipulation tasks using the edited scene to 
+            reflect scene changes due to prior manipulation stages, which is not possible with 
+            the existing baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Splat-MOVER. -->
+    <div class="columns is-centered">
+      <div class="content column is-full-width">
+        <h2 class="title is-3"><span class="splat_mover">Splat-MOVER</span></h2>
+        <p>
+          Given a natural language description of a multi-stage manipulation task, 
+          <span class="splat_mover">Splat-MOVER</span> utilizes the affordance-and-semantic-aware 
+          ASK-Splat scene representation to localize and mask the objects specified by the natural 
+          language prompt in the 3D scene, providing specific initial and target configurations 
+          for the robotic manipulator at each stage of the manipulation task.
+          Subsequently, SEE-Splat edits the ASK-Splat scene in real-time, reflecting the current state 
+          of the real-world scene, thereby enabling its use in multi-stage manipulation task.
+          Leveraging object-specific grasp affordance codes from ASK-Splat, Grasp-Splat generates 
+          candidate grasp configurations for each object, at each stage of the manipulation task.
+        </p>
+
+        <div class="content is-full-width has-text-centered">
+          <img src="./static/images/splat_mover.png"
+               alt="Splat-MOVER stack."/>
+          <p class="has-text-justified">
+            <span class="splat_mover">Splat-MOVER</span> enables language-guided, multi-stage 
+            robotic manipulation, through an affordance-and-semantic-aware scene representation ASK-Splat, 
+            a real-time scene-editing module SEE-Splat, and a grasp-generation module Grasp-Splat.
+          </p>
+        </div>
+
+        <!-- <br/> -->
+
+        <!-- ASK-Splat. -->
+        <h3 class="title is-4">ASK-Splat</h3>
+        <div class="content has-text-justified">
+          <p>
+            ASK-Splat encodes semantic and affordance knowledge distilled from 2D foundation models 
+            in the 3D GSplat scene representation.  For semantic knowledge, we distill vision-language
+            features from <a href="https://arxiv.org/pdf/2103.00020">CLIP</a>
+            a 2D foundation model for predicting image-text 
+            similarity. We leverage the <a href="https://arxiv.org/pdf/2112.01071">MASKCLIP</a> 
+            feature distillation method
+            to extract pixel-wise image features from CLIP and embed them as attributes of the Gaussians 
+            during training of the GSplat representation. Further, we distill grasp affordances from a 
+            pre-trained 2D vision-based affordance model, 
+            <a href="https://robo-affordances.github.io/resources/vrb_paper.pdf">
+              Vision-Robotics Bridge (VRB)
+            </a> 
+            which predicts a set of contact points given an image. VRB is trained from videos 
+            of humans conducting manipulation tasks. We post-process the resulting output of VRB to 
+            obtain dense pixel-wise grasp affordance codes, which are embedded as attributes in the 
+            ASK-Splat Gaussians during training. ASK-Splat adapts the concepts of a
+            <a href="https://arxiv.org/pdf/2205.15585">
+              distilled feature 
+            field (DFF)
+            </a>
+            from the NeRF literature to the 
+            Gaussian Splatting (GSplat) model representation.  
+            ASK-Splat trains online from RGB images collected in a brief training phase prior to robot 
+            operation.
+          </p>
+
+          
+          <div class="columns">
+            <div class="column has-text-centered">
+
+              ASK-Splat representation for a    
+              <div class="select is-small is-rounded">     
+                <select id="interative-menu-ask-splat" onchange="updateInteractive_ASK_Splat()">
+                <option value="cooking_scene" selected="selected">"Cooking Scene."</option>
+                <option value="chopping_scene">"Chopping Scene."</option>
+                <option value="cleaning_scene">"Cleaning Scene."</option>
+                <option value="workshop_scene">"Workshop Scene."</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container">
+            <div id="results-carousel-ask-splat" class="carousel results-carousel">
+              <div class="item item-rgb">
+                <video poster="" class="ask_splat_rgb" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ask_splat/cooking_scene/rgb.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-semantics-0">
+                <video poster="" class="ask_splat_semantics_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ask_splat/cooking_scene/semantics_0.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-semantics-1">
+                <video poster="" class="ask_splat_semantics_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ask_splat/cooking_scene/semantics_1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-affordance">
+                <video poster="" class="ask_splat_affordance" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ask_splat/cooking_scene/affordance.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      
+        <!-- SEE-Splat. -->
+        <h3 class="title is-4">SEE-Splat</h3>
+        <div class="content has-text-justified">
+          <p>
+            Leveraging ASK-Splat, SEE-Splat enables real-time scene-editing by extracting 
+            relevant objects from the ASK-Splat scene through a semantic 3D masking process, 
+            and subsequently moving these objects in 3D, by applying a transformation 
+            specified by a function describing the desired motion.  We use SEE-Splat to 
+            reflect the movements of objects made by a robot as it carries out multi-stage 
+            manipulation tasks, so that later stages of the task can build upon the results 
+            of earlier stages (e.g., moving a saucepan to the stove, then putting a fruit 
+            in the saucepan). Moreover, SEE-Splat enables visualization of the evolution of 
+            the scene prior to the execution of the robot's plans.
+          </p>
+
+          <div class="content is-full-width has-text-centered">
+            <img src="./static/images/see_splat_pipeline.png"
+                 alt="SEE-Splat Pipeline."/>
+            <p class="has-text-justified">
+              SEE-Splat leverages 3D ASK-Splat for open-vocabulary scene-editing via 
+              semantic localization of relevant Gaussian primitives in the scene, followed
+               by 3D masking and transformation of these Gaussians. We visualize the 
+               Gaussians as as a point cloud, with well-defined geometry.
+            </p>
+          </div>
+
+          
+          <div class="columns">
+            <div class="column has-text-centered">
+
+              Via SEE-SPlat, visualize the evolution of the    
+              <div class="select is-small is-rounded">     
+                <select id="interative-menu-see-splat" onchange="updateInteractive_SEE_Splat()">
+                <option value="cooking_scene">"Cooking Scene."</option>
+                <option value="cleaning_scene">"Cleaning Scene."</option>
+                <option value="workshop_scene" selected="selected">"Workshop Scene."</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container">
+            <div id="results-carousel-see-splat" class="carousel results-carousel">
+              <div class="item item-see-splat-run-0">
+                <video poster="" class="see_splat_run_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/see_splat/workshop_scene/run_0.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-see-splat-run-1">
+                <video poster="" class="see_splat_run_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/see_splat/workshop_scene/run_1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-see-splat-run-2">
+                <video poster="" class="see_splat_run_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/see_splat/workshop_scene/run_2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-see-splat-run-3">
+                <video poster="" class="see_splat_run_3" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/see_splat/workshop_scene/run_3.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- <br/> -->
+
+        <!-- Grasp-Splat. -->
+        <h3 class="title is-4">Grasp-Splat</h3>
+        <div class="content has-text-justified">
+          <p>
+            Grasp-Splat leverages the affordance and semantic codes embedded in the 
+            ASK-Splat scene to propose candidate grasp poses that are more likely to 
+            succeed. Grasp-Splat takes an open-vocabulary task command and produces 
+            3D segmentation masks for the relevant objects using ASK-Splat's 
+            embedded semantic codes.  It then queries the pre-trained grasp proposal 
+            model 
+            <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_GraspNet-1Billion_A_Large-Scale_Benchmark_for_General_Object_Grasping_CVPR_2020_paper.pdf">
+              GraspNet
+            </a>
+            to produce a set of grasp candidates 
+            for the objects, and re-ranks these candidates based on alignment with the 
+            grasp affordance codes embedded in the ASK-Splat scene. Following the grasp 
+            generation, Grasp-Splat selects and executes the best grasp to 
+            accomplish the sub-task.
+          </p>
+
+          
+          <div class="columns">
+            <div class="column has-text-centered">
+
+              Visualize the affordance-alligned grasps proposed by Grasp-Splat in the    
+              <div class="select is-small is-rounded">     
+                <select id="interative-menu-grasp-splat" onchange="updateInteractive_Grasp_Splat()">
+                <option value="cooking_scene">"Cooking Scene."</option>
+                <option value="cleaning_scene">"Cleaning Scene."</option>
+                <option value="workshop_scene" selected="selected">"Workshop Scene."</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container">
+            <div id="results-carousel-grasp-splat" class="carousel results-carousel">
+              <div class="item item-graspnet-object-1">
+                <video poster="" class="graspnet_object_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/grasp_splat/workshop_scene/object_1/graspnet.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-grasp-splat-object-1">
+                <video poster="" class="grasp_splat_object_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/grasp_splat/workshop_scene/object_1/grasp_splat.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-graspnet-object-2">
+                <video poster="" class="graspnet_object_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/grasp_splat/workshop_scene/object_2/graspnet.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-grasp-splat-object-2">
+                <video poster="" class="grasp_splat_object_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/grasp_splat/workshop_scene/object_2/grasp_splat.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Splat-MOVER Experiments. -->
+    <div class="columns is-centered">
+      <div class="content column is-full-width">
+        <h2 class="title is-3">Hardware Experiments</h2>
+        <p>
+          We showcase Splat-MOVER's effectiveness through hardware experiments on a Kinova robot,
+          where Splat-MOVER achieves significantly improved success rates across four single-stage, 
+          open-vocabulary manipulation tasks compared to two recent baseline methods: 
+          <a href="https://arxiv.org/pdf/2309.07970">
+            LERF-TOGO
+          </a>
+          (using the publicly-available code implementation) and 
+          <a href="https://arxiv.org/pdf/2308.07931">
+            F3RM
+          </a>
+          (implemented by the authors of this work). <!-- \cite{rashid2023language} and F3RM \cite{shen2023F3RM}.-->
+          In three single-stage manipulation tasks, Splat-MOVER improves the success rate of LERF-TOGO
+          by a factor of at least 2.4, while achieving almost the same success rate in the last task 
+          (95% compared to LERF-TOGO's 100%). Likewise, Splat-MOVER improves the success rates of 
+          F3RM by a factor ranging from about 1.2 to 3.3, across the four single-stage manipulation 
+          tasks. We provide a brief summary of the performance of each algorithm in the hardware experiments 
+          in the table at the end of this subsection.
+        </p>
+
+        <!--https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l-->
+        <table class="styled-table">
+          <caption>Grasping success rate and the percentage of grasps in the affordance region (AGSR)
+            of each object for LERF-TOGO, F3RM, and 
+            Splat-MOVER across 20 feasible trials.</caption>
+          <thead>
+              <tr>
+                  <th>Methods</th>
+                  <th colspan="2">Saucepan</th>
+                  <th colspan="2">Knife</th>
+                  <th colspan="2">Cleaning Spray</th>
+                  <th colspan="2">Power Drill</th>
+              </tr>
+              <tr>
+                  <th></th>
+                  <th>Grasping Success (%)</th>
+                  <th>AGSR (%)</th>
+                  <th>Grasping Success (%)</th>
+                  <th>AGSR (%)</th>
+                  <th>Grasping Success (%)</th>
+                  <th>AGSR (%)</th>
+                  <th>Grasping Success (%)</th>
+                  <th>AGSR (%)</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>LERF-TOGO</td>
+                  <td>40</td>
+                  <td>5</td>
+                  <td>35</td>
+                  <td>35</td>
+                  <td>25</td>
+                  <td>15</td>
+                  <td>100</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>F3RM</td>
+                  <td>30</td>
+                  <td>30</td>
+                  <td>60</td>
+                  <td>60</td>
+                  <td>75</td>
+                  <td>40</td>
+                  <td>70</td>
+                  <td>70</td>
+              </tr>
+              <tr class="active-row">
+                  <td>Splat-MOVER</td>
+                  <td>100</td>
+                  <td>60</td>
+                  <td>85</td>
+                  <td>85</td>
+                  <td>90</td>
+                  <td>90</td>
+                  <td>95</td>
+                  <td>95</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <p>
+        In addition, we demonstrate the superior performance of Splat-MOVER in four multi-stage 
+        manipulation tasks, where we leverage SEE-Splat to reflect the updates in the scene resulting 
+        from prior manipulation stages, a capability absent in existing baseline approaches.
+        We provide detailed results in our <a href="https://arxiv.org/pdf/2405.04378">paper</a>.
+      </p>
+
+      <div class="column is-full-width has-text-centered">
+        <img id="grasps-comparison-image", src="./static/images/grasp_comparison.png"
+             alt="Grasps proposed by GraspNet, LERF-TOGO, F3RM, and Grasp-Splat."/>
+        <p class="has-text-justified">
+          Candidate grasps for a <i>saucepan</i>, <i>knife in a guard</i>, <i>cleaning spray</i>, 
+          and <i>power drill</i> (from top-to-bottom), generated by GraspNet, LERF-TOGO, F3RM, and 
+          Grasp-Splat (from left-to-right). GraspNet does not consider the semantic features of 
+          the object in generating candidate grasps; as a result, the proposed grasps are not 
+          localized in regions where a human might grasp the object, unlike the candidate grasps 
+          proposed by F3RM, LERF-TOGO, and Grasp-Splat. Although LERF-TOGO and F3RM require the 
+          specification of 
+          a grasp location from an operator, an LLM, or via human demonstrations to generate 
+          more-promising candidate grasps, Grasp-Splat generates candidate grasps of similar or 
+          better quality without requiring external guidance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./static/videos/splat_mover/Splat_MOVER.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{shorinwa2024splat_mover,
+      title={Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting},
+      author={Shorinwa, Ola and Tucker, Johnathan and Smith, Aliyah and Swann, Aiden and Chen, Timothy and Firoozi, Roya and Kennedy III, Monroe and Schwager, Mac},
+      journal={arXiv preprint arXiv:2405.04378},
+      year={2024}
+    }
+  </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/paper/splat_mover_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https:/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+            and <a href="https://github.com/peract/peract.github.io">PerAct</a> for the website template.
+          </p>
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
