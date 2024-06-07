@@ -111,6 +111,10 @@ body {
 .publication-body img {
 }
 
+#ask_see_image {
+  margin-top: 1.5em; 
+}
+
 .results-carousel {
   overflow: hidden;
 }

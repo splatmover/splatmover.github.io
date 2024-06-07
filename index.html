@@ -267,6 +267,17 @@
     <div class="columns is-centered">
       <div class="content column is-full-width">
         <h2 class="title is-3"><span class="splat_mover">Splat-MOVER</span></h2>
+
+        <div class="content is-full-width has-text-centered">
+          <img src="./static/images/splat_mover.png"
+               alt="Splat-MOVER stack."/>
+          <p class="has-text-justified">
+            <span class="splat_mover">Splat-MOVER</span> enables language-guided, multi-stage 
+            robotic manipulation, through an affordance-and-semantic-aware scene representation ASK-Splat, 
+            a real-time scene-editing module SEE-Splat, and a grasp-generation module Grasp-Splat.
+          </p>
+        </div>
+
         <p>
           Given a natural language description of a multi-stage manipulation task, 
           <span class="splat_mover">Splat-MOVER</span> utilizes the affordance-and-semantic-aware 
@@ -279,13 +290,15 @@
           candidate grasp configurations for each object, at each stage of the manipulation task.
         </p>
 
-        <div class="content is-full-width has-text-centered">
-          <img src="./static/images/splat_mover.png"
-               alt="Splat-MOVER stack."/>
+        <div class="content is-full-width has-text-centered" id="ask_see_image">
+          <img src="./static/images/ask_see_splat_pipeline.png"
+               alt="ASK-Splat, SEE-Splat Pipeline."/>
           <p class="has-text-justified">
-            <span class="splat_mover">Splat-MOVER</span> enables language-guided, multi-stage 
-            robotic manipulation, through an affordance-and-semantic-aware scene representation ASK-Splat, 
-            a real-time scene-editing module SEE-Splat, and a grasp-generation module Grasp-Splat.
+            ASK-Splat grounds 2D visual attributes (e.g, color and lighting effects), grasp affordance,
+             and semantic embeddings within a $3$D GSplat representation and is trained entirely from RGB images.
+              Leveraging 3D ASK-Splat, SEE-Splat enables open-vocabulary scene-editing via semantic localization
+               of relevant Gaussian primitives in the scene, followed by 3D masking and transformation &#958; 
+               of these Gaussians.
           </p>
         </div>
 
@@ -383,17 +396,6 @@
             in the saucepan). Moreover, SEE-Splat enables visualization of the evolution of 
             the scene prior to the execution of the robot's plans.
           </p>
-
-          <div class="content is-full-width has-text-centered">
-            <img src="./static/images/see_splat_pipeline.png"
-                 alt="SEE-Splat Pipeline."/>
-            <p class="has-text-justified">
-              SEE-Splat leverages 3D ASK-Splat for open-vocabulary scene-editing via 
-              semantic localization of relevant Gaussian primitives in the scene, followed
-               by 3D masking and transformation of these Gaussians. We visualize the 
-               Gaussians as as a point cloud, with well-defined geometry.
-            </p>
-          </div>
 
           
           <div class="columns">
