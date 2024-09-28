@@ -178,6 +178,74 @@
           <div class="is-size-5 publication-authors">
           </div>
 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="/">Ola Shorinwa</a><sup>&#42;</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=D1OiGH8AAAAJ&hl=en">Johnathan Tucker</a><sup>&#42;</sup>,</span>
+            <span class="author-block">
+              <a href="/">Aliyah Smith</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=feH32sgAAAAJ">Aiden Swann</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=u9ZQdTwAAAAJ">Timothy Chen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=ZfxUwNEAAAAJ">Roya Firoozi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=x2ZPRfoAAAAJ">Monroe Kennedy III</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=-EqbTXoAAAAJ">Mac Schwager</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div>
+          <div>
+            <sup>&#42;</sup>Equal Contribution.
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="/static/paper/splat_mover_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.04378"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code<sup>&dagger;</sup></span>
+                </a>
+              </span>
+            </div>
+            <div>
+              <sup>&dagger;</sup>Coming Soon.
+            </div>
+
         </div>
       </div>
     </div>
@@ -532,13 +600,13 @@
           </a>
           (using the publicly-available code implementation) and 
           <a href="https://arxiv.org/pdf/2308.07931">
-            F3RM
+            F3RM*
           </a>
-          (implemented by the authors of this work). <!-- \cite{rashid2023language} and F3RM \cite{shen2023F3RM}.-->
+          (implemented by the authors of this work).
           In three single-stage manipulation tasks, Splat-MOVER improves the success rate of LERF-TOGO
           by a factor of at least 2.4, while achieving almost the same success rate in the last task 
           (95% compared to LERF-TOGO's 100%). Likewise, Splat-MOVER improves the success rates of 
-          F3RM by a factor ranging from about 1.2 to 3.3, across the four single-stage manipulation 
+          F3RM* by a factor ranging from about 1.2 to 3.3, across the four single-stage manipulation 
           tasks. We provide a brief summary of the performance of each algorithm in the hardware experiments 
           in the table at the end of this subsection.
         </p>
@@ -546,7 +614,7 @@
         <!--https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l-->
         <table class="styled-table">
           <caption>Grasping success rate and the percentage of grasps in the affordance region (AGSR)
-            of each object for LERF-TOGO, F3RM, and 
+            of each object for LERF-TOGO, F3RM*, and 
             Splat-MOVER across 20 feasible trials.</caption>
           <thead>
               <tr>
@@ -581,7 +649,7 @@
                   <td>0</td>
               </tr>
               <tr>
-                  <td>F3RM</td>
+                  <td>F3RM*</td>
                   <td>30</td>
                   <td>30</td>
                   <td>60</td>
@@ -614,14 +682,14 @@
 
       <div class="column is-full-width has-text-centered">
         <img id="grasps-comparison-image", src="./static/images/grasp_comparison.png"
-             alt="Grasps proposed by GraspNet, LERF-TOGO, F3RM, and Grasp-Splat."/>
+             alt="Grasps proposed by GraspNet, LERF-TOGO, F3RM*, and Grasp-Splat."/>
         <p class="has-text-justified">
           Candidate grasps for a <i>saucepan</i>, <i>knife in a guard</i>, <i>cleaning spray</i>, 
-          and <i>power drill</i> (from top-to-bottom), generated by GraspNet, LERF-TOGO, F3RM, and 
+          and <i>power drill</i> (from top-to-bottom), generated by GraspNet, LERF-TOGO, F3RM*, and 
           Grasp-Splat (from left-to-right). GraspNet does not consider the semantic features of 
           the object in generating candidate grasps; as a result, the proposed grasps are not 
           localized in regions where a human might grasp the object, unlike the candidate grasps 
-          proposed by F3RM, LERF-TOGO, and Grasp-Splat. Although LERF-TOGO and F3RM require the 
+          proposed by F3RM*, LERF-TOGO, and Grasp-Splat. Although LERF-TOGO and F3RM* require the 
           specification of 
           a grasp location from an operator, an LLM, or via human demonstrations to generate 
           more-promising candidate grasps, Grasp-Splat generates candidate grasps of similar or 
@@ -649,10 +717,18 @@
   </div>
 </section>
 
-
 <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{shorinwa2024splat,
+      title={Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting},
+      author={Shorinwa, Ola and Tucker, Johnathan and Smith, Aliyah and Swann, Aiden and Chen, Timothy and Firoozi, Roya and Kennedy, Monroe David and Schwager, Mac},
+      booktitle={8th Annual Conference on Robot Learning},
+      year={2024}
+    }
+  </code></pre>
+  </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
